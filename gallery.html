@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie Photoshop — Will Design</title>
+
+  <!-- feuille principale (ta grande feuille avec toutes les variables et styles) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- petits styles spécifiques à la galerie (SEULEMENT classes manquantes) -->
+  <link rel="stylesheet" href="gallery.css">
+<script src="image_gallery.js" defer></script>
+  <script src="gallery.js" defer></script>
+  
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#mainContent">Aller au contenu</a>
+
+  <div class="container">
+    <header class="hero card" role="banner" style="padding:18px;">
+      <div class="hero-header">
+        <div class="brand">
+          <a href="index.html" class="logo" aria-label="Will Design — Accueil">
+            <img src="logo-light.png" alt="Will Design" class="logo-img">
+          </a>
+          <div>
+            
+            
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="themeToggle" class="theme-btn" aria-pressed="false" title="Basculer le thème">
+          <!-- Sun icon -->
+          <svg id="iconSun" class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="#f59e0b" stroke-width="1.4"/>
+            <g stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round">
+              <path d="M12 2v2"/>
+              <path d="M12 20v2"/>
+              <path d="M4.2 4.2l1.4 1.4"/>
+              <path d="M18.4 18.4l1.4 1.4"/>
+              <path d="M2 12h2"/>
+              <path d="M20 12h2"/>
+              <path d="M4.2 19.8l1.4-1.4"/>
+              <path d="M18.4 5.6l1.4-1.4"/>
+            </g>
+          </svg>
+          <!-- Moon icon -->
+          <svg id="iconMoon" class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z" stroke="#60a5fa" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span id="themeLabel" style="font-size:13px;opacity:.9;margin-left:4px"></span>
+        </button>
+          <a class="btn secondary" href="portofolio.html">Portfolio</a>
+        </div>
+      </div>
+
+      <div class="hero-content" style="padding:12px 0 0 0;">
+        <p class="bio">Sélection de visuels / montages réalisés sur Photoshop. Cliquez sur une vignette pour agrandir.</p>
+      </div>
+    </header>
+
+    <main id="mainContent" aria-live="polite">
+      <section aria-labelledby="galleryTitle">
+        <h2 id="galleryTitle">Galerie Photoshop</h2>
+        <p class="muted">Exportés en JPG/PNG depuis Photoshop — haute résolution disponible sur demande.</p>
+
+        <div class="gallery-grid" id="galleryGrid">
+  <!-- Les items seront injectés ici par le JS -->
+</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <strong>*KASONGO LUBANGI*</strong> Serge — Will Design</p>
+    </footer>
+  </div>
+
+  <!-- Lightbox minimal accessible -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Agrandir l'image">
+    <button class="lightbox-close" aria-label="Fermer la vue agrandie">&times;</button>
+    <button class="lightbox-prev" aria-label="Image précédente" type="button">&#10094;</button>
+
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption" class="muted" aria-live="polite"></figcaption>
+    </div>
+
+    <button class="lightbox-next" aria-label="Image suivante" type="button">&#10095;</button>
+  </div>
+
+</body>
+</html>
